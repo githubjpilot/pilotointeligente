@@ -8,7 +8,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-image: url('imagem-fundo.jpg');
+            background-size: cover;
+            background-position: center;
             color: #333;
             scroll-behavior: smooth;
         }
@@ -18,6 +20,11 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
         }
 
         .container {
@@ -41,6 +48,12 @@
         .service-item {
             width: 30%;
             padding: 10px;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
         }
 
         .service-item h3 {
@@ -91,6 +104,13 @@
         /* Seção Sobre Mim */
         .about-me {
             margin-top: 50px;
+            text-align: center;
+        }
+
+        .about-me img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         /* Contato */
@@ -159,6 +179,7 @@
 </head>
 <body>
     <header>
+        <img src="imagem-cabecalho.jpg" alt="Piloto Inteligente">
         <h1>Piloto Inteligente - Serviços de Drone</h1>
     </header>
 
@@ -166,16 +187,14 @@
         <!-- Seção de Serviços -->
         <section class="services">
             <div class="service-item">
+                <img src="imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
                 <h3>Audiovisual e Eventos</h3>
                 <p>Captura de imagens aéreas, efeitos visuais e muito mais para eventos e produções audiovisuais.</p>
             </div>
             <div class="service-item">
+                <img src="imagem-topografia.jpg" alt="Topografia e Levantamento de Dados">
                 <h3>Topografia e Levantamento de Dados</h3>
                 <p>Levantamento de dados precisos para análises topográficas e geoespaciais.</p>
-            </div>
-            <div class="service-item">
-                <h3>Monitoramento Agrícola e Ambiental</h3>
-                <p>Utilização de drones para monitorar plantações, condições do solo e preservação ambiental.</p>
             </div>
         </section>
 
@@ -200,13 +219,14 @@
                 </div>
             </div>
             <div class="differential-image">
-                <img src="https://via.placeholder.com/300" alt="Imagem de drones em ação">
+                <img src="imagem-diferenciais.jpg" alt="Diferencial">
             </div>
         </section>
 
         <!-- Seção Sobre Mim -->
         <section class="about-me">
             <h2>Sobre Mim</h2>
+            <img src="imagem-sobre-mim.jpg" alt="Foto de João Vitor">
             <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
             <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
         </section>
