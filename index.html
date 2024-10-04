@@ -16,16 +16,30 @@
         }
 
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 10px; /* Reduzido para aproximar a imagem do cabeçalho */
+            position: relative;
             text-align: center;
+            color: white;
+            height: 200px; /* Altura total do cabeçalho */
+            overflow: hidden; /* Para ocultar partes da imagem que saem do cabeçalho */
         }
 
         header img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px; /* Adicionado espaço entre a imagem e o título */
+            width: 100%; /* Mantém a largura total */
+            height: auto; /* Mantém a proporção */
+            position: absolute; /* Posiciona a imagem como fundo */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza a imagem */
+            z-index: 1; /* Coloca a imagem abaixo do texto */
+        }
+
+        .header-title {
+            position: relative;
+            z-index: 2; /* Coloca o texto acima da imagem */
+            font-size: 2.5em;
+            margin-top: 20px; /* Espaço acima do texto */
+            opacity: 0; /* Começa invisível */
+            transition: opacity 1s ease; /* Transição suave para aparecer */
         }
 
         .container {
@@ -49,7 +63,6 @@
         .service-item {
             width: 30%;
             padding: 10px;
-            color: white; /* Texto em branco para contraste */
         }
 
         .service-item img {
@@ -60,7 +73,7 @@
 
         .service-item h3 {
             font-size: 1.5em;
-            color: #fff; /* Cabeçalho em branco */
+            color: #000;
         }
 
         /* Seção de Diferenciais com layout novo */
@@ -107,7 +120,6 @@
         .about-me {
             margin-top: 50px;
             text-align: center;
-            color: white; /* Texto sobre mim em branco */
         }
 
         .about-me img {
@@ -183,7 +195,7 @@
 <body>
     <header>
         <img src="imagem-cabecalho.jpg" alt="Piloto Inteligente">
-        <h1>Piloto Inteligente - Serviços de Drone</h1>
+        <div class="header-title" id="headerTitle">Piloto Inteligente</div>
     </header>
 
     <div class="container">
@@ -251,6 +263,10 @@
     <footer>
         <p>&copy; 2024 Piloto Inteligente. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
 
+    <script>
+        // JavaScript para mostrar o título do cabeçalho com efeito de desvanecimento
+        window.onload = function() {
+            const title = document.getElementById('headerTitle');
+            title.style.opacity = 1; // Altera a opacidade para 1 para mostrar o texto
+       
