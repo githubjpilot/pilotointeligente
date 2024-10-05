@@ -19,7 +19,7 @@
             position: relative;
             text-align: center;
             color: white;
-            height: 200px; /* Altura total do cabeçalho */
+            height: 250px; /* Altura total do cabeçalho */
             overflow: hidden; /* Para ocultar partes da imagem que saem do cabeçalho */
         }
 
@@ -51,6 +51,7 @@
         h1, h2 {
             text-align: center;
             color: white; /* Títulos em branco */
+            font-size: 2em; /* Aumentando o tamanho da fonte dos títulos */
         }
 
         /* Seção de Serviços */
@@ -106,6 +107,7 @@
         .differential-item p {
             margin: 0;
             font-size: 1.2em;
+            color: white; /* Texto dos diferenciais em branco */
         }
 
         .differential-image {
@@ -122,19 +124,23 @@
         .about-me {
             margin-top: 50px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo com contraste para a seção */
             padding: 20px; /* Espaçamento interno */
-            border-radius: 8px; /* Bordas arredondadas */
         }
 
         .about-me h2 {
             color: white; /* Título "Sobre Mim" em branco */
+            font-size: 2em; /* Aumentando o tamanho da fonte do título */
         }
 
         .about-me img {
             width: 200px;
             height: auto;
             margin-bottom: 20px;
+        }
+
+        .about-me p {
+            color: white; /* Texto da seção "Sobre Mim" em branco */
+            font-size: 1.2em; /* Tamanho do texto em "Sobre Mim" */
         }
 
         /* Contato */
@@ -204,7 +210,6 @@
 <body>
     <header>
         <img src="imagem-cabecalho.jpg" alt="Piloto Inteligente">
-        <div class="header-title" id="headerTitle">Piloto Inteligente</div>
     </header>
 
     <div class="container">
@@ -263,7 +268,7 @@
         <h2>Contato</h2>
         <p>Email Principal: <a href="mailto:pilotointeligente@contato.com">pilotointeligente@contato.com</a></p>
         <p>Email Alternativo: <a href="mailto:joao.pilot@outlook.com">joao.pilot@outlook.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5511987654321" class="whatsapp-button">Fale comigo!</a></p>
+        <p><a href="https://wa.me/5511987654321" class="whatsapp-button">Fale comigo!</a></p>
     </section>
 
     <footer>
