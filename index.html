@@ -8,46 +8,37 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('imagem-fundo.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff; /* Muda a cor do texto para branco */
+            background-color: #333;
+            color: #fff;
             scroll-behavior: smooth;
         }
 
+        /* Estilo do cabeçalho com imagem de fundo */
         header {
             position: relative;
             text-align: center;
             color: white;
-            height: 220px; /* Aumentei a altura do cabeçalho */
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6); /* Adiciona um fundo escuro com transparência */
-        }
-
-        header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Mantém a proporção correta da imagem */
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
+            height: 400px;
+            background-image: url('sua-imagem-cabecalho.jpg'); /* Insira o caminho da sua imagem aqui */
+            background-size: cover;
+            background-position: center;
         }
 
         /* Estilo para o mini cabeçalho estiloso */
         .header-title {
-            position: relative;
-            z-index: 2;
-            font-size: 3em;
-            margin-top: 0;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3.5em; /* Aumentado o tamanho da fonte */
             font-family: 'Verdana', sans-serif;
             letter-spacing: 2px;
-            color: #fff; /* Deixei branco */
-            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; /* Cor do texto */
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
             padding: 10px 20px;
-            display: inline-block;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 2; /* Mantém o título sobre a imagem */
         }
 
         .container {
@@ -58,6 +49,14 @@
 
         h1, h2 {
             text-align: center;
+            font-size: 3em; /* Aumentado o tamanho das fontes */
+        }
+
+        /* Títulos das seções */
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         /* Seção de Serviços */
@@ -80,7 +79,7 @@
         }
 
         .service-item h3 {
-            font-size: 1.5em;
+            font-size: 1.8em; /* Aumentado o tamanho da fonte */
             color: #fff; /* Texto branco */
         }
 
@@ -105,14 +104,14 @@
         }
 
         .differential-item h4 {
-            font-size: 2em;
+            font-size: 2.2em; /* Aumentado o tamanho da fonte */
             margin-bottom: 5px;
             color: #fff; /* Texto branco */
         }
 
         .differential-item p {
             margin: 0;
-            font-size: 1.2em;
+            font-size: 1.5em; /* Aumentado o tamanho da fonte */
             color: #fff; /* Texto branco */
         }
 
@@ -137,6 +136,10 @@
             width: 200px;
             height: auto;
             margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1.5em; /* Aumentado o tamanho da fonte */
         }
 
         /* Contato */
@@ -204,11 +207,14 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho com imagem de fundo e título -->
     <header>
         <div class="header-title">Piloto Inteligente</div>
     </header>
 
     <div class="container">
+        <!-- Título para a Seção de Serviços -->
+        <h2 class="section-title">Serviços</h2>
         <!-- Seção de Serviços -->
         <section class="services">
             <div class="service-item">
@@ -248,9 +254,10 @@
             </div>
         </section>
 
+        <!-- Título da Seção Sobre Mim -->
+        <h2 class="section-title">Sobre Mim</h2>
         <!-- Seção Sobre Mim -->
         <section class="about-me">
-            <h2>Sobre Mim</h2>
             <img src="imagem-sobre-mim.jpg" alt="Foto de João Vitor">
             <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
             <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
@@ -262,16 +269,4 @@
         <h2>Contato</h2>
         <p>Email Principal: <a href="mailto:pilotointeligente@contato.com">pilotointeligente@contato.com</a></p>
         <p>Email Alternativo: <a href="mailto:joao.pilot@outlook.com">joao.pilot@outlook.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5511947911155" target="_blank">(11) 94791-1155</a></p>
-
-        <!-- Botão do WhatsApp -->
-        <a class="whatsapp-button" href="https://wa.me/5511947911155" target="_blank">
-            Fale Conosco no WhatsApp
-        </a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Piloto Inteligente - Todos os Direitos Reservados</p>
-    </footer>
-</body>
-</html>
+        <p>WhatsApp: <a href="https
