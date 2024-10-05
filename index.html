@@ -6,227 +6,100 @@
     <title>Piloto Inteligente - Serviços de Drone</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #333;
-            color: #fff;
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Estilo do cabeçalho com imagem de fundo */
         header {
-            position: relative;
-            text-align: center;
+            background-image: url('imagens/sua-imagem-cabecalho.jpg'); /* Caminho da imagem de cabeçalho */
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            height: 400px;
-            background-image: url('sua-imagem-cabecalho.jpg'); /* Insira o caminho da sua imagem aqui */
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Título sobreposto à imagem */
-        .header-title {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 3.5em; /* Aumentado o tamanho da fonte */
-            font-family: 'Verdana', sans-serif;
-            letter-spacing: 2px;
-            color: #fff; /* Cor do texto */
-            background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
-            padding: 10px 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            z-index: 2; /* Mantém o título sobre a imagem */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
             padding: 20px;
         }
 
-        h1, h2 {
-            text-align: center;
-            font-size: 3em; /* Aumentado o tamanho das fontes */
-        }
-
-        /* Navegação */
         nav {
-            text-align: center;
-            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
         }
 
         nav a {
-            margin: 0 15px;
-            font-size: 1.5em;
-            color: #00b0ff;
+            color: white;
             text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
         }
 
-        /* Seções */
+        nav a:hover {
+            background-color: #575757;
+        }
+
         .section-title {
-            font-size: 2.5em;
-            text-align: center;
-            margin: 30px 0;
+            font-size: 2em;
+            margin-top: 20px;
+            color: #333;
         }
 
-        /* Seção de Serviços */
-        .services {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin-bottom: 50px;
+        .services, .about-me {
+            margin: 20px 0;
         }
 
         .service-item {
-            width: 30%;
-            padding: 10px;
+            margin-bottom: 20px;
         }
 
         .service-item img {
             width: 100%;
+            max-width: 600px; /* Limita a largura da imagem */
             height: auto;
-            margin-bottom: 10px;
         }
 
-        .service-item h3 {
-            font-size: 1.8em; /* Aumentado o tamanho da fonte */
-            color: #fff; /* Texto branco */
-        }
-
-        /* Seção de Diferenciais */
         .differentials-section {
             display: flex;
-            margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
-            color: #fff;
-            padding: 20px;
-            align-items: center;
             justify-content: space-between;
         }
 
-        .differentials {
-            flex: 1;
-            padding-right: 20px;
-        }
-
         .differential-item {
-            margin-bottom: 20px;
-        }
-
-        .differential-item h4 {
-            font-size: 2.2em; /* Aumentado o tamanho da fonte */
-            margin-bottom: 5px;
-            color: #fff; /* Texto branco */
-        }
-
-        .differential-item p {
-            margin: 0;
-            font-size: 1.5em; /* Aumentado o tamanho da fonte */
-            color: #fff; /* Texto branco */
-        }
-
-        .differential-image {
-            flex: 1;
-            text-align: right;
-        }
-
-        .differential-image img {
-            width: 300px;
-            height: auto;
-        }
-
-        /* Seção Sobre Mim */
-        .about-me {
-            margin-top: 50px;
-            display: flex; /* Flexbox para layout lado a lado */
-            align-items: center; /* Alinha verticalmente ao centro */
-            color: #fff; /* Texto branco */
+            width: 48%;
         }
 
         .about-me img {
-            width: 200px;
+            width: 200px; /* Largura da sua foto */
             height: auto;
-            margin-right: 20px; /* Espaço entre a imagem e o texto */
+            float: left;
+            margin-right: 20px; /* Espaçamento à direita da foto */
         }
 
-        .about-me p {
-            font-size: 1.5em; /* Aumentado o tamanho da fonte */
-        }
-
-        /* Contato */
         .contact {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .contact a {
-            color: #00b0ff;
-            text-decoration: none;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
         }
 
         .whatsapp-button {
-            background-color: #25d366;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
             display: inline-block;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #128c7e;
+            border-radius: 5px;
         }
 
         footer {
-            background-color: #000;
-            color: #fff;
             text-align: center;
             padding: 10px 0;
-        }
-
-        /* Responsividade */
-        @media(max-width: 768px) {
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-item {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .differentials-section {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .differential-image {
-                text-align: center;
-                margin-top: 20px;
-            }
-
-            .differential-image img {
-                width: 100%;
-            }
-
-            .about-me {
-                flex-direction: column; /* Coloca imagem acima do texto em telas menores */
-                align-items: center; /* Alinha itens ao centro */
-            }
-
-            .about-me img {
-                margin-right: 0; /* Remove margem à direita */
-                margin-bottom: 20px; /* Adiciona margem abaixo em telas menores */
-            }
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
@@ -250,12 +123,12 @@
         <!-- Seção de Serviços -->
         <section class="services">
             <div class="service-item">
-                <img src="imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
+                <img src="imagens/imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
                 <h3>Audiovisual e Eventos</h3>
                 <p>Captura de imagens aéreas, efeitos visuais e muito mais para eventos e produções audiovisuais.</p>
             </div>
             <div class="service-item">
-                <img src="imagem-topografia.jpg" alt="Topografia e Levantamento de Dados">
+                <img src="imagens/imagem-topografia.jpg" alt="Topografia e Levantamento de Dados">
                 <h3>Topografia e Levantamento de Dados</h3>
                 <p>Levantamento de dados precisos para análises topográficas e geoespaciais.</p>
             </div>
@@ -284,7 +157,7 @@
                 </div>
             </div>
             <div class="differential-image">
-                <img src="imagem-diferenciais.jpg" alt="Diferenciais">
+                <img src="imagens/imagem-diferenciais.jpg" alt="Diferenciais">
             </div>
         </section>
 
@@ -292,9 +165,9 @@
         <h2 id="sobre" class="section-title">Sobre Mim</h2>
         <!-- Seção Sobre Mim -->
         <section class="about-me">
-            <img src="sua-foto.jpg" alt="Sua Foto Profissional"> <!-- Insira o caminho da sua foto aqui -->
+            <img src="imagens/sua-foto.jpg" alt="Sua Foto Profissional"> <!-- Insira o caminho da sua foto aqui -->
             <p>
-                Sou João Vitor, especialista em drones com mais de três anos de experiência no setor. Minha formação em Aviação Civil e minha paixão pela aviação me motivam a oferecer serviços de qualidade. Trabalho com audiovisual, topografia e muito mais, sempre com foco na excelência e satisfação do cliente.
+                Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas. Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.
             </p>
         </section>
 
