@@ -6,136 +6,213 @@
     <title>Piloto Inteligente - Serviços de Drone</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('imagem-fundo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-image: url('imagens/sua-imagem-cabecalho.jpg'); /* Caminho da imagem de cabeçalho */
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            text-align: center;
             color: white;
+            height: 200px; /* Altura total do cabeçalho */
+            overflow: hidden; /* Para ocultar partes da imagem que saem do cabeçalho */
+        }
+
+        header img {
+            width: 100%; /* Mantém a largura total */
+            height: auto; /* Mantém a proporção */
+            position: absolute; /* Posiciona a imagem como fundo */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza a imagem */
+            z-index: 1; /* Coloca a imagem abaixo do texto */
+        }
+
+        .header-title {
+            position: relative;
+            z-index: 2; /* Coloca o texto abaixo da imagem */
             font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 20px; /* Espaço acima do texto */
+            opacity: 0; /* Começa invisível */
+            transition: opacity 1s ease; /* Transição épica para aparecer */
         }
 
         .container {
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
         }
 
-        nav {
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Seção de Serviços */
+        .services {
             display: flex;
             justify-content: space-around;
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-top: 20px;
-            color: #333;
-        }
-
-        .services, .about-me {
-            margin: 20px 0;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .service-item {
-            margin-bottom: 20px;
+            width: 30%;
+            padding: 10px;
         }
 
         .service-item img {
             width: 100%;
-            max-width: 600px; /* Limita a largura da imagem */
             height: auto;
+            margin-bottom: 10px;
         }
 
+        .service-item h3 {
+            font-size: 1.5em;
+            color: #000;
+        }
+
+        /* Seção de Diferenciais com layout novo */
         .differentials-section {
             display: flex;
+            margin-top: 50px;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            align-items: center;
             justify-content: space-between;
         }
 
+        .differentials {
+            flex: 1;
+            padding-right: 20px;
+        }
+
         .differential-item {
-            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .differential-item h4 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .differential-item p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .differential-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .differential-image img {
+            width: 300px;
+            height: auto;
+        }
+
+        /* Seção Sobre Mim */
+        .about-me {
+            margin-top: 50px;
+            text-align: center;
         }
 
         .about-me img {
-            width: 200px; /* Largura da sua foto */
+            width: 200px;
             height: auto;
-            float: left;
-            margin-right: 20px; /* Espaçamento à direita da foto */
+            margin-bottom: 20px;
         }
 
+        /* Contato */
         .contact {
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #f0f0f0;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #00b0ff;
+            text-decoration: none;
         }
 
         .whatsapp-button {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
             border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
         }
 
         footer {
+            background-color: #000;
+            color: #fff;
             text-align: center;
             padding: 10px 0;
-            background-color: #333;
-            color: white;
+        }
+
+        /* Responsividade */
+        @media(max-width: 768px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .differentials-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .differential-image {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .differential-image img {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho com imagem de fundo e título -->
     <header>
-        <div class="header-title">Piloto Inteligente</div>
+        <img src="imagem-cabecalho.jpg" alt="Piloto Inteligente">
+        <div class="header-title" id="headerTitle">Piloto Inteligente</div>
     </header>
 
     <div class="container">
-        <!-- Navegação -->
-        <nav>
-            <a href="#servicos">Serviços</a>
-            <a href="#sobre">Sobre Mim</a>
-            <a href="#diferenciais">Diferenciais</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <!-- Título para a Seção de Serviços -->
-        <h2 id="servicos" class="section-title">Serviços</h2>
         <!-- Seção de Serviços -->
         <section class="services">
             <div class="service-item">
-                <img src="imagens/imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
+                <img src="imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
                 <h3>Audiovisual e Eventos</h3>
                 <p>Captura de imagens aéreas, efeitos visuais e muito mais para eventos e produções audiovisuais.</p>
             </div>
             <div class="service-item">
-                <img src="imagens/imagem-topografia.jpg" alt="Topografia e Levantamento de Dados">
+                <img src="imagem-topografia.jpg" alt="Topografia e Levantamento de Dados">
                 <h3>Topografia e Levantamento de Dados</h3>
                 <p>Levantamento de dados precisos para análises topográficas e geoespaciais.</p>
             </div>
         </section>
 
-        <!-- Título da Seção Diferenciais -->
-        <h2 id="diferenciais" class="section-title">Diferenciais</h2>
         <!-- Seção Diferenciais -->
         <section class="differentials-section">
             <div class="differentials">
@@ -153,35 +230,46 @@
                 </div>
                 <div class="differential-item">
                     <h4>4. Atendimento Personalizado</h4>
-                    <p>Cada cliente é único, e adaptamos nossos serviços para atender às suas expectativas específicas.</p>
+                    <p>Cada cliente recebe atendimento exclusivo e soluções personalizadas para o seu projeto.</p>
                 </div>
             </div>
             <div class="differential-image">
-                <img src="imagens/imagem-diferenciais.jpg" alt="Diferenciais">
+                <img src="imagem-diferenciais.jpg" alt="Diferencial">
             </div>
         </section>
 
-        <!-- Título da Seção Sobre Mim -->
-        <h2 id="sobre" class="section-title">Sobre Mim</h2>
         <!-- Seção Sobre Mim -->
         <section class="about-me">
-            <img src="imagens/sua-foto.jpg" alt="Sua Foto Profissional"> <!-- Insira o caminho da sua foto aqui -->
-            <p>
-                Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas. Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.
-            </p>
+            <h2>Sobre Mim</h2>
+            <img src="imagem-sobre-mim.jpg" alt="Foto de João Vitor">
+            <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
+            <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
         </section>
-
-        <!-- Seção Contato -->
-        <div class="contact" id="contato">
-            <h2>Contato</h2>
-            <p>Para consultas e orçamentos, entre em contato:</p>
-            <a href="https://api.whatsapp.com/send?phone=seu-número-aqui" class="whatsapp-button">Fale Conosco pelo WhatsApp</a>
-        </div>
     </div>
 
-    <!-- Rodapé -->
+    <!-- Contato -->
+    <section class="contact">
+        <h2>Contato</h2>
+        <p>Email Principal: <a href="mailto:pilotointeligente@contato.com">pilotointeligente@contato.com</a></p>
+        <p>Email Alternativo: <a href="mailto:joao.pilot@outlook.com">joao.pilot@outlook.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5511947911155" target="_blank">(11) 94791-1155</a></p>
+
+        <!-- Botão do WhatsApp -->
+        <a class="whatsapp-button" href="https://wa.me/5511947911155" target="_blank">
+            Fale Conosco no WhatsApp
+        </a>
+    </section>
+
     <footer>
         <p>&copy; 2024 Piloto Inteligente. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // JavaScript para mostrar As fotos com efeito suavemente no sitee
+        window.onload = function() {
+            const title = document.getElementById('headerTitle');
+            title.style.opacity = 1; // Altera a opacidade para 1 para mostrar o texto
+        };
+    </script>
 </body>
 </html>
