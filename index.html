@@ -11,7 +11,7 @@
             background-image: url('imagem-fundo.jpg');
             background-size: cover;
             background-position: center;
-            color: #333;
+            color: #333; /* Cor padrão do texto */
             scroll-behavior: smooth;
         }
 
@@ -50,6 +50,7 @@
 
         h1, h2 {
             text-align: center;
+            color: white; /* Títulos em branco */
         }
 
         /* Seção de Serviços */
@@ -73,15 +74,15 @@
 
         .service-item h3 {
             font-size: 1.5em;
-            color: #000;
+            color: #fff; /* Títulos dos serviços em branco */
         }
 
-        /* Seção de Diferenciais com layout novo */
+        /* Seção Diferenciais com layout novo */
         .differentials-section {
             display: flex;
             margin-top: 50px;
             background-color: #000;
-            color: #fff;
+            color: #fff; /* Texto da seção diferenciais em branco */
             padding: 20px;
             align-items: center;
             justify-content: space-between;
@@ -99,6 +100,7 @@
         .differential-item h4 {
             font-size: 2em;
             margin-bottom: 5px;
+            color: #fff; /* Títulos dos diferenciais em branco */
         }
 
         .differential-item p {
@@ -120,6 +122,13 @@
         .about-me {
             margin-top: 50px;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo com contraste para a seção */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 8px; /* Bordas arredondadas */
+        }
+
+        .about-me h2 {
+            color: white; /* Título "Sobre Mim" em branco */
         }
 
         .about-me img {
@@ -131,19 +140,19 @@
         /* Contato */
         .contact {
             background-color: #333;
-            color: #fff;
+            color: #fff; /* Texto de contato em branco */
             padding: 20px;
             text-align: center;
         }
 
         .contact a {
-            color: #00b0ff;
+            color: #00b0ff; /* Links em azul claro */
             text-decoration: none;
         }
 
         .whatsapp-button {
-            background-color: #25d366;
-            color: #fff;
+            background-color: #25d366; /* Botão do WhatsApp */
+            color: #fff; /* Texto do botão em branco */
             padding: 10px 20px;
             border-radius: 5px;
             text-align: center;
@@ -154,12 +163,12 @@
         }
 
         .whatsapp-button:hover {
-            background-color: #128c7e;
+            background-color: #128c7e; /* Efeito hover do botão */
         }
 
         footer {
-            background-color: #000;
-            color: #fff;
+            background-color: #000; /* Fundo do rodapé */
+            color: #fff; /* Texto do rodapé em branco */
             text-align: center;
             padding: 10px 0;
         }
@@ -201,6 +210,7 @@
     <div class="container">
         <!-- Seção de Serviços -->
         <section class="services">
+            <h2>Serviços</h2> <!-- Título da seção de serviços -->
             <div class="service-item">
                 <img src="imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
                 <h3>Audiovisual e Eventos</h3>
@@ -215,6 +225,7 @@
 
         <!-- Seção Diferenciais -->
         <section class="differentials-section">
+            <h2>Diferenciais</h2> <!-- Título da seção de diferenciais -->
             <div class="differentials">
                 <div class="differential-item">
                     <h4>1. Precisão</h4>
@@ -252,12 +263,7 @@
         <h2>Contato</h2>
         <p>Email Principal: <a href="mailto:pilotointeligente@contato.com">pilotointeligente@contato.com</a></p>
         <p>Email Alternativo: <a href="mailto:joao.pilot@outlook.com">joao.pilot@outlook.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5511947911155" target="_blank">(11) 94791-1155</a></p>
-
-        <!-- Botão do WhatsApp -->
-        <a class="whatsapp-button" href="https://wa.me/5511947911155" target="_blank">
-            Fale Conosco no WhatsApp
-        </a>
+        <p>WhatsApp: <a href="https://wa.me/5511987654321" class="whatsapp-button">Fale comigo!</a></p>
     </section>
 
     <footer>
@@ -265,10 +271,9 @@
     </footer>
 
     <script>
-        // JavaScript para mostrar As fotos com efeito suavemente no sitee
         window.onload = function() {
-            const title = document.getElementById('headerTitle');
-            title.style.opacity = 1; // Altera a opacidade para 1 para mostrar o texto
+            const title = document.getElementById("headerTitle");
+            title.style.opacity = 1; // Torna o texto visível após o carregamento
         };
     </script>
 </body>
