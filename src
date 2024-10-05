@@ -1,14 +1,6 @@
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet("/exemplo")
-public class ExemploServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        response.getWriter().println("<h1>Olá do Servlet!</h1>");
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Bem-vindo ao Piloto Inteligente - Serviços de Drone!");
+        // Aqui você pode adicionar funcionalidades como processamento de dados, lógica de negócios, etc.
     }
 }
