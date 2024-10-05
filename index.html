@@ -24,7 +24,7 @@
             background-position: center;
         }
 
-        /* Estilo para o mini cabeçalho estiloso */
+        /* Título sobreposto à imagem */
         .header-title {
             position: absolute;
             bottom: 20px;
@@ -52,11 +52,24 @@
             font-size: 3em; /* Aumentado o tamanho das fontes */
         }
 
-        /* Títulos das seções */
+        /* Navegação */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.5em;
+            color: #00b0ff;
+            text-decoration: none;
+        }
+
+        /* Seções */
         .section-title {
             font-size: 2.5em;
             text-align: center;
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
 
         /* Seção de Serviços */
@@ -128,14 +141,15 @@
         /* Seção Sobre Mim */
         .about-me {
             margin-top: 50px;
-            text-align: center;
+            display: flex; /* Flexbox para layout lado a lado */
+            align-items: center; /* Alinha verticalmente ao centro */
             color: #fff; /* Texto branco */
         }
 
         .about-me img {
             width: 200px;
             height: auto;
-            margin-bottom: 20px;
+            margin-right: 20px; /* Espaço entre a imagem e o texto */
         }
 
         .about-me p {
@@ -203,6 +217,16 @@
             .differential-image img {
                 width: 100%;
             }
+
+            .about-me {
+                flex-direction: column; /* Coloca imagem acima do texto em telas menores */
+                align-items: center; /* Alinha itens ao centro */
+            }
+
+            .about-me img {
+                margin-right: 0; /* Remove margem à direita */
+                margin-bottom: 20px; /* Adiciona margem abaixo em telas menores */
+            }
         }
     </style>
 </head>
@@ -213,8 +237,16 @@
     </header>
 
     <div class="container">
+        <!-- Navegação -->
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
         <!-- Título para a Seção de Serviços -->
-        <h2 class="section-title">Serviços</h2>
+        <h2 id="servicos" class="section-title">Serviços</h2>
         <!-- Seção de Serviços -->
         <section class="services">
             <div class="service-item">
@@ -229,6 +261,8 @@
             </div>
         </section>
 
+        <!-- Título da Seção Diferenciais -->
+        <h2 id="diferenciais" class="section-title">Diferenciais</h2>
         <!-- Seção Diferenciais -->
         <section class="differentials-section">
             <div class="differentials">
@@ -246,27 +280,35 @@
                 </div>
                 <div class="differential-item">
                     <h4>4. Atendimento Personalizado</h4>
-                    <p>Cada cliente recebe atendimento exclusivo e soluções personalizadas para o seu projeto.</p>
+                    <p>Cada cliente é único, e adaptamos nossos serviços para atender às suas expectativas específicas.</p>
                 </div>
             </div>
             <div class="differential-image">
-                <img src="imagem-diferenciais.jpg" alt="Diferencial">
+                <img src="imagem-diferenciais.jpg" alt="Diferenciais">
             </div>
         </section>
 
         <!-- Título da Seção Sobre Mim -->
-        <h2 class="section-title">Sobre Mim</h2>
+        <h2 id="sobre" class="section-title">Sobre Mim</h2>
         <!-- Seção Sobre Mim -->
         <section class="about-me">
-            <img src="imagem-sobre-mim.jpg" alt="Foto de João Vitor">
-            <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
-            <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
+            <img src="sua-foto.jpg" alt="Sua Foto Profissional"> <!-- Insira o caminho da sua foto aqui -->
+            <p>
+                Sou João Vitor, especialista em drones com mais de três anos de experiência no setor. Minha formação em Aviação Civil e minha paixão pela aviação me motivam a oferecer serviços de qualidade. Trabalho com audiovisual, topografia e muito mais, sempre com foco na excelência e satisfação do cliente.
+            </p>
         </section>
+
+        <!-- Seção Contato -->
+        <div class="contact" id="contato">
+            <h2>Contato</h2>
+            <p>Para consultas e orçamentos, entre em contato:</p>
+            <a href="https://api.whatsapp.com/send?phone=seu-número-aqui" class="whatsapp-button">Fale Conosco pelo WhatsApp</a>
+        </div>
     </div>
 
-    <!-- Contato -->
-    <section class="contact">
-        <h2>Contato</h2>
-        <p>Email Principal: <a href="mailto:pilotointeligente@contato.com">pilotointeligente@contato.com</a></p>
-        <p>Email Alternativo: <a href="mailto:joao.pilot@outlook.com">joao.pilot@outlook.com</a></p>
-        <p>WhatsApp: <a href="https
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Piloto Inteligente. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
