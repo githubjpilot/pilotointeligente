@@ -19,7 +19,7 @@
             position: relative;
             text-align: center;
             color: white;
-            height: 350px; /* Altura maior para evitar corte da imagem */
+            height: 450px; /* Altura aumentada */
             overflow: hidden;
         }
 
@@ -80,6 +80,9 @@
         .service-item h3 {
             font-size: 2em;
             color: #fff;
+            white-space: nowrap; /* Impede quebra de linha */
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         /* Seção de Segurança */
@@ -87,6 +90,12 @@
             text-align: center;
             margin-top: 50px;
             padding: 20px;
+        }
+
+        .security img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         /* Seção Diferenciais */
@@ -217,7 +226,7 @@
 </head>
 <body>
     <header>
-        <img src="imagem-cabecalho.jpg" alt="Piloto Inteligente">
+        <img src="nova-imagem-cabecalho.jpg" alt="Piloto Inteligente">
     </header>
 
     <div class="container">
@@ -239,6 +248,7 @@
         <!-- Seção Segurança -->
         <section class="security">
             <h2>Segurança Patrimonial</h2>
+            <img src="seguranca.png" alt="Segurança Patrimonial">
             <p style="color: white;">Nossos drones proporcionam vigilância eficaz e segura para grandes áreas, garantindo um monitoramento constante com alta precisão.</p>
         </section>
 
@@ -268,12 +278,19 @@
             </div>
         </section>
 
+        <!-- Vídeo -->
+        <section class="video-section">
+            <video width="100%" controls>
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </section>
+
         <!-- Seção Sobre Mim -->
         <section class="about-me">
             <h2 class="about-title">Sobre Mim</h2>
             <img src="imagem-sobre-mim.jpg" alt="Foto do Piloto Inteligente">
-            <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
-            <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
+            <p>Com anos de experiência na área de drones, sou um profissional apaixonado por inovação e tecnologia aérea. Meu foco é entregar resultados precisos e de alta qualidade.</p>
         </section>
     </div>
 
