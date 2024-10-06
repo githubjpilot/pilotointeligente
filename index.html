@@ -11,7 +11,7 @@
             background-image: url('imagem-fundo.jpg');
             background-size: cover;
             background-position: center;
-            color: #333; /* Cor padrão do texto */
+            color: #333;
             scroll-behavior: smooth;
         }
 
@@ -19,27 +19,27 @@
             position: relative;
             text-align: center;
             color: white;
-            height: 250px; /* Altura total do cabeçalho */
-            overflow: hidden; /* Para ocultar partes da imagem que saem do cabeçalho */
+            height: 350px; /* Altura maior para evitar corte da imagem */
+            overflow: hidden;
         }
 
         header img {
-            width: 100%; /* Mantém a largura total */
-            height: auto; /* Mantém a proporção */
-            position: absolute; /* Posiciona a imagem como fundo */
+            width: 100%;
+            height: auto;
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* Centraliza a imagem */
-            z-index: 1; /* Coloca a imagem abaixo do texto */
+            transform: translate(-50%, -50%);
+            z-index: 1;
         }
 
         .header-title {
             position: relative;
-            z-index: 2; /* Coloca o texto abaixo da imagem */
+            z-index: 2;
             font-size: 2.5em;
-            margin-top: 20px; /* Espaço acima do texto */
-            opacity: 0; /* Começa invisível */
-            transition: opacity 1s ease; /* Transição épica para aparecer */
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease;
         }
 
         .container {
@@ -50,8 +50,12 @@
 
         h1, h2 {
             text-align: center;
-            color: white; /* Títulos em branco */
-            font-size: 2.5em; /* Aumentando o tamanho da fonte dos títulos */
+            color: white;
+            font-size: 2.5em;
+        }
+
+        h2.about-title {
+            text-align: left; /* "Sobre Mim" alinhado à esquerda */
         }
 
         /* Seção de Serviços */
@@ -74,41 +78,49 @@
         }
 
         .service-item h3 {
-            font-size: 2em; /* Aumentando o tamanho da fonte dos serviços */
-            color: #fff; /* Títulos dos serviços em branco */
+            font-size: 2em;
+            color: #fff;
         }
 
-        /* Seção Diferenciais com layout novo */
+        /* Seção de Segurança */
+        .security {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        /* Seção Diferenciais */
         .differentials-section {
             display: flex;
             margin-top: 50px;
             background-color: #000;
-            color: #fff; /* Texto da seção diferenciais em branco */
+            color: #fff;
             padding: 20px;
             align-items: center;
-            justify-content: center; /* Centraliza a seção */
-            text-align: center; /* Centraliza o texto */
+            justify-content: center;
+            text-align: center;
         }
 
         .differentials {
             flex: 1;
-            padding: 20px; /* Espaçamento interno */
+            padding: 20px;
         }
 
         .differential-item {
             margin-bottom: 20px;
+            text-align: left; /* Texto dos diferenciais à esquerda */
         }
 
         .differential-item h4 {
             font-size: 2em;
             margin-bottom: 5px;
-            color: #fff; /* Títulos dos diferenciais em branco */
+            color: #fff;
         }
 
         .differential-item p {
             margin: 0;
             font-size: 1.2em;
-            color: white; /* Texto dos diferenciais em branco */
+            color: white;
         }
 
         .differential-image {
@@ -117,20 +129,20 @@
         }
 
         .differential-image img {
-            width: 400px; /* Aumentando a largura da imagem para esquerda */
+            width: 400px;
             height: auto;
         }
 
         /* Seção Sobre Mim */
         .about-me {
             margin-top: 50px;
-            text-align: right;
-            padding: 20px; /* Espaçamento interno */
+            text-align: left; /* Texto alinhado à esquerda */
+            padding: 20px;
         }
 
         .about-me h2 {
-            color: white; /* Título "Sobre Mim" em branco */
-            font-size: 2em; /* Aumentando o tamanho da fonte do título */
+            color: white;
+            font-size: 2em;
         }
 
         .about-me img {
@@ -140,26 +152,21 @@
         }
 
         .about-me p {
-            color: white; /* Texto da seção "Sobre Mim" em branco */
-            font-size: 1.2em; /* Tamanho do texto em "Sobre Mim" */
+            color: white;
+            font-size: 1.2em;
         }
 
         /* Contato */
         .contact {
             background-color: #333;
-            color: #fff; /* Texto de contato em branco */
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
 
-        .contact a {
-            color: #00b0ff; /* Links em azul claro */
-            text-decoration: none;
-        }
-
         .whatsapp-button {
-            background-color: #25d366; /* Botão do WhatsApp */
-            color: #fff; /* Texto do botão em branco */
+            background-color: #25d366;
+            color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
             text-align: center;
@@ -170,12 +177,12 @@
         }
 
         .whatsapp-button:hover {
-            background-color: #128c7e; /* Efeito hover do botão */
+            background-color: #128c7e;
         }
 
         footer {
-            background-color: #000; /* Fundo do rodapé */
-            color: #fff; /* Texto do rodapé em branco */
+            background-color: #000;
+            color: #fff;
             text-align: center;
             padding: 10px 0;
         }
@@ -216,7 +223,7 @@
     <div class="container">
         <!-- Seção de Serviços -->
         <section class="services">
-            <h2>Serviços</h2> <!-- Título da seção de serviços -->
+            <h2>Serviços</h2>
             <div class="service-item">
                 <img src="imagem-audiovisual.jpg" alt="Audiovisual e Eventos">
                 <h3>Audiovisual e Eventos</h3>
@@ -229,10 +236,16 @@
             </div>
         </section>
 
+        <!-- Seção Segurança -->
+        <section class="security">
+            <h2>Segurança Patrimonial</h2>
+            <p style="color: white;">Nossos drones proporcionam vigilância eficaz e segura para grandes áreas, garantindo um monitoramento constante com alta precisão.</p>
+        </section>
+
         <!-- Seção Diferenciais -->
         <section class="differentials-section">
             <div class="differentials">
-                <h2>Diferenciais</h2> <!-- Título da seção de diferenciais -->
+                <h2>Diferenciais</h2>
                 <div class="differential-item">
                     <h4>1. Precisão</h4>
                     <p>Nossos drones oferecem imagens e dados com altíssima precisão, garantindo confiança nos resultados.</p>
@@ -257,21 +270,18 @@
 
         <!-- Seção Sobre Mim -->
         <section class="about-me">
-            <h2>Sobre Mim</h2> <!-- Título da seção sobre mim -->
+            <h2 class="about-title">Sobre Mim</h2>
             <img src="imagem-sobre-mim.jpg" alt="Foto do Piloto Inteligente">
-            <p>Sou João Vitor, especialista em serviços de drones. Minha missão é proporcionar soluções inovadoras e eficazes no uso de drones para diversas aplicações. Estou sempre buscando aprimorar meus conhecimentos e oferecer o melhor para meus clientes.</p>
-        </section>
-
-        <!-- Contato -->
-        <section class="contact">
-            <h2>Contato</h2>
-            <p>Email: <a href="mailto:pilotointeligentecontato@gmail.com" style="color: white;">pilotointeligentecontato@gmail.com</a></p>
-            <p>Email: <a href="mailto:areadojoaocontato@gmail.com" style="color: white;">areadojoaocontato@gmail.com</a></p>   
-            <p><a href="https://wa.me/5511947911155" class="whatsapp-button">Fale comigo!</a></p>
-            <p>Confira meu conteúdo sobre aviação e drones:</p>
-           <p><a href="https://www.tiktok.com/@pilotointeligente" style="color: white;" target="_blank">TikTok Piloto Inteligente</a></p>
+            <p>Prazer, João Vitor. Possuo formação em Ciências Aeronáuticas e sou especializado em drones. Trabalhei para grandes empresas como Airbus e minha paixão pela aviação me levou a explorar novas formas de tecnologia, garantindo a segurança e eficiência no controle de grandes áreas.</p>
+            <p>Com experiência no setor, ofereço soluções inovadoras e personalizadas para cada cliente.</p>
         </section>
     </div>
+
+    <section class="contact">
+        <h2>Entre em Contato</h2>
+        <p style="color: white;">Quer saber mais? Entre em contato pelo WhatsApp e descubra como nossos serviços podem atender às suas necessidades.</p>
+        <a href="https://wa.me/5511999999999" class="whatsapp-button">Fale Conosco pelo WhatsApp</a>
+    </section>
 
     <footer>
         <p>&copy; 2024 Piloto Inteligente. Todos os direitos reservados.</p>
